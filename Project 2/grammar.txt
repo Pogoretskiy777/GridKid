@@ -1,0 +1,70 @@
+This grammar is based off of official Ruby precedence: https://ruby-doc.org/core-2.6.2/doc/syntax/precedence_rdoc.html
+
+expression = logical
+
+logical_or = logical_or OR logical_and
+           | logical_and
+
+logical_and = logical_and AND relational
+            | relational
+
+relational = relational EQUALS bitor_xor
+           | relational NOT_EQUALS bitor_xor
+           | relational LESS_THAN bitor_xor
+           | relational LESS_THAN_OR_EQUAL bitor_xor
+           | relational MORE_THAN bitor_xor
+           | relational MORE_THAN_OR_EQUAL bitor_xor
+           | bitor_xor
+
+bitor_xor = bitor_xor VERTICAL bitand
+          | bitor_xor XOR bitand
+          | bitand
+
+bitand = bitand AND bitshift
+        | bitshift
+
+bitshift = bitshift LEFT_ARROWS arithmetic
+         | bitshift RIGHT_ARROWS arithmetic
+         | arithmetic
+
+arithmetic = arithmetic PLUS multiplicative
+           | arithmetic HYPHEN multiplicative
+           | multiplicative
+
+multiplicative = multiplicative ASTERISK negate
+               | multiplicative FRONT_SLASH negate
+               | multiplicative PERCENT negate
+               | negate
+
+negate = NOT power
+       | power
+
+power = power EXPO bitnot
+      | bitnot
+
+bitnot = bitnot EXCLAIMATION primary
+       | primary         
+
+primary = INT 
+         | FLOAT 
+         | BOOL 
+         | STR 
+         | float_cast 
+         | int_cast 
+         | rvalue 
+         | lvalue
+         | function
+         | LEFT_PARENTHESIS expression RIGHT_PARENTHESIS
+
+l_value = LEFT_BRACKET expression COMMA expression RIGHT_BRACKET
+
+r_value = HASH LEFT_BRACKET expression COMMA expression RIGHT_BRACKET
+
+function = MIN LEFT_PARENTHESIS lvalue COMMA lvalue RIGHT_PARENTHESIS
+         | MAX LEFT_PARENTHESIS lvalue COMMA lvalue RIGHT_PARENTHESIS
+         | MEAN LEFT_PARENTHESIS lvalue COMMA lvalue RIGHT_PARENTHESIS
+         | SUM LEFT_PARENTHESIS lvalue COMMA lvalue RIGHT_PARENTHESIS
+
+float_cast = LEFT_PARENTHESIS expression RIGHT_PARENTHESIS
+
+int_cast = LEFT_PARENTHESIS expression RIGHT_PARENTHESIS
