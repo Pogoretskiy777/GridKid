@@ -8,7 +8,7 @@ GridKid is a terminal-based spreadsheet program that can store expressions, eval
 To run the GridKid program, make sure the current file path is similar to the following:
 
 ```sh
-cd /GridKid/'Project 3'
+cd 'Project 3'
 ```
 
 Next, run the following program to start GridKid in your terminal:
