@@ -1,0 +1,6 @@
+{
+    "name": "Ruby Codespace",
+    "image": "mcr.microsoft.com/devcontainers/ruby:0-3.2",
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "features": {}
+  }
