@@ -5,7 +5,15 @@ GridKid is a terminal-based spreadsheet program that can store expressions, eval
 
 ## Running GridKid
 
-To run the GridKid program, make sure the current file path is similar to the following:
+To run the GridKid program, ensure you have the right version of Ruby (3.2.0 - 3.2.2) by checking the version:
+
+```sh
+ruby --version
+```
+
+If the version differs, then install and set the correct one. There are [multiple ways](https://superuser.com/questions/340490/how-to-install-and-use-different-versions-of-ruby) to do this.
+
+Make sure the current file path is the following:
 
 ```sh
 cd 'Project 3'
