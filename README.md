@@ -13,15 +13,15 @@ ruby --version
 
 If the version differs, then install and set the correct one. There are [multiple ways](https://superuser.com/questions/340490/how-to-install-and-use-different-versions-of-ruby) to do this.
 
-You will need the Curses library installed. You can check if it is installed by running:
+You will need the Curses library installed. You can check this by running:
 
 ```sh
 gem list
 ```
 
-If Curses is not in the list, then you can install it by following the [Linux guide](https://www.cyberciti.biz/faq/linux-install-ncurses-library-headers-on-debian-ubuntu-centos-fedora/).
+If Curses does not appear in the list, then you can install it by following the following [Linux guide](https://www.cyberciti.biz/faq/linux-install-ncurses-library-headers-on-debian-ubuntu-centos-fedora/).
 
-Make sure the current file path is the following:
+Next, enter the 'Project 3' directory. This directory contains the executable:
 
 ```sh
 cd 'Project 3'
