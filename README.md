@@ -43,6 +43,8 @@ _Note: The TUI may not fit in your current terminal window size. To avoid bugs, 
 
 The GridKid TUI shows three panels: Evaluation, Formula, and the Grid. To edit a cell, the TUI cursor must be in the formula editor. The evaluation updates after the editor mode is toggled. The cell and formula panel show the source text and the evaluation panel shows the evaluation of that text. To evaluate an expression, the formula editor should start with an equal sign (=) followed by the expression. Otherwise, the text would be treated as a string primitive as long as it is not any other primitive.
 
+![GridKid Usage](https://github.com/Pogoretskiy777/GridKid/blob/main/gridkid.gif)
+
 Since the program is TUI-based, GridKid is controlled exclusively through the keyboard. Here are the following hotkeys:
 
 - **Toggle editor mode:** TAB
